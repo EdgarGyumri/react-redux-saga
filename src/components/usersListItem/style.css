@@ -1,0 +1,7 @@
+.users-list__item{
+  border: 1px solid gray;
+  padding: 5px;
+  margin: 10px;
+  display: inline-block;
+  cursor: pointer;
+}
