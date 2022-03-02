@@ -1,15 +1,19 @@
-import types from "../types";
+import { allUsersTypes } from "../types";
 
 export default function allUsersReducer(state = [], action) {
   switch(action.type) {
-    case types.allUsersTypes.LOAD_USERS: 
+    case allUsersTypes.SET_USERS:
       if(action.payload !== undefined) {
         return [
           ...action.payload
         ]
       }
+      break;
+    case allUsersTypes.LOAD_USERS_ERROR:
+      console.log('error');
+      alert('Users loading error, please reload page')
+      return state
     default:
       return state
-  }
-  
+  }  
 }

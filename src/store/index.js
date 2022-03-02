@@ -5,11 +5,6 @@ import usersSaga from './saga/usersSaga';
 
 const sagaMiddleware = createSagaMiddleware();
 
-// const logger = store => next => action => {
-//   console.log(store, action, 'store');
-//   next(action)
-// }
-
 const store = createStore(rootReducer, applyMiddleware(sagaMiddleware))
 
 sagaMiddleware.run(usersSaga)

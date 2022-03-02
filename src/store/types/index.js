@@ -1,7 +1,7 @@
 import * as allUsersTypes from './allUsersTypes'
+import * as singleUserTypes from './singleUserTypes'
 
-const types = {
-  allUsersTypes
-}
-
-export default types;
+export  {
+  allUsersTypes,
+  singleUserTypes
+};

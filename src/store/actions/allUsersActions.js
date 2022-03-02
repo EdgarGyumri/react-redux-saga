@@ -1,12 +1,18 @@
-import types from '../types'
+import { allUsersTypes } from '../types'
 
 function allUsersLoad(payload){
   return {
-    type: types.allUsersTypes.LOAD_USERS,
+    type: allUsersTypes.SET_USERS,
     payload
+  }
+}
+function allUsersLoadError(){
+  return {
+    type: allUsersTypes.LOAD_USERS_ERROR,
   }
 }
 
 export {
-  allUsersLoad
+  allUsersLoad,
+  allUsersLoadError
 }
